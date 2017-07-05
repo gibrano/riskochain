@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Demo - Simple parallax scrolling tutorial</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+
+		<link rel="author" href="https://plus.google.com/u/0/109859280204979591787/about"/>
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+		<!--
+			* This demo was prepared for you by Petr Tichy - Ihatetomatoes.net
+			* Want to see more similar demos and tutorials?
+			* Help by spreading the word about Ihatetomatoes blog.
+			* Facebook - https://www.facebook.com/ihatetomatoesblog
+			* Twitter - https://twitter.com/ihatetomatoes
+			* Google+ - https://plus.google.com/u/0/109859280204979591787/about
+		-->
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+        <style type="text/css">
+			body {
+				font-family: 'Open Sans', sans-serif;
+			}
+		</style>
+    </head>
+    <body class="loading">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+       	<div id="preload">
+	       	<img src="img/bcg_slide-5.jpg">
+	       	<img src="img/bcg_slide-8.jpg">
+	       	<img src="img/bcg_slide-6.jpg">
+       	</div>
+
+       	<main>
+
+	        <section id="slide-1" class="homeSlide">
+	        	<div class="bcg"
+	        		data-center="background-position: 50% 0px;"
+	        		data-top-bottom="background-position: 50% -100px;"
+	        		data-anchor-target="#slide-1"
+	        	>
+		        	<div class="hsContainer">
+			    		<div class="hsContent" data-center="bottom: 150px; opacity: 1" data-top="bottom: 1200px; opacity: 0" data-anchor-target="#slide-1 h2">
+                <a href="#" id="to-slide-2"><img src="img/riskochaintraspa.png" class="logo"></a>
+                <h2>Tu soluci&oacute;n en analisis de riesgo</h2>
+			    		</div>
+		        	</div>
+	        	</div>
+		    </section>
+
+			<section id="slide-2" class="homeSlide">
+				<div class="bcg"
+					data-center="background-position: 50% 10px;"
+					data-top-bottom="background-position: 50% -100px;"
+					data-bottom-top="background-position: 50% 100px;"
+					data-anchor-target="#slide-2"
+				>
+			    	<div class="hsContainer">
+			    		<div class="hsContent"
+			    			data-center="opacity: 1"
+			    			data-center-top="opacity: 0"
+			    			data--100-bottom="opacity: 0;"
+			    			data-anchor-target="#slide-2"
+			    		>
+              <div class="formInput">
+                <h2>Especifica los datos a continuaci&oacute;n</h2>
+
+                <form id="form-riskochain">
+                  <div class="form-group row">
+                    <label for="firstname" class="col-4 col-form-label">Nombre</label>
+                    <div class="col-8">
+                      <input class="form-control" type="text" id="firstname" name="firstname" placeholder="ej. Rafael" required="required">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="lastname" class="col-4 col-form-label">Apellido</label>
+                    <div class="col-8">
+                      <input class="form-control" type="text" id="lastname" name="lastname" placeholder="ej. Perez" required="required">
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="example-date-input" class="col-4 col-form-label">Fecha de nacimiento</label>
+                    <div class="col-8">
+                      <input class="form-control" type="date" id="birthdate" name="birthdate" placeholder="ej. 2011-08-19" required="required">
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="lastname" class="col-4 col-form-label">CURP</label>
+                    <div class="col-8">
+                      <input class="form-control" type="text" id="curp" name="curp" placeholder="ej. GOSA130543NTDSJR09" required="required">
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="sector" class="col-4 col-form-label">Sector</label>
+                    <div class="col-8">
+                      <select class="custom-select col-12" id="sector" name="sector" required="required">
+                        <option value="" selected>Especifique...</option>
+                        <option value="auto">Autos</option>
+                        <option value="salud">Salud</option>
+                        <option value="vivienda">Vivienda</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Consultar</button>
+
+                </form>
+              </div>
+
+			    		</div>
+			    	</div>
+				</div>
+			</section>
+
+			<section id="slide-3" class="homeSlide">
+				<div class="bcg"
+					data-center="background-position: 50% 0px;"
+					data-top-bottom="background-position: 50% -100px;"
+					data-bottom-top="background-position: 50% 100px;"
+					data-anchor-target="#slide-3"
+				>
+			    	<div class="hsContainer">
+						<div class="hsContent"
+              data-center="opacity: 1"
+              data-center-top="opacity: 0"
+              data--100-bottom="opacity: 0;"
+							data-anchor-target="#slide-3 h2"
+						>
+				    		<h2 id="title-result">Este es el riesgo para este cliente</h2>
+                <div id="result" class="col-12">
+                  <div id="data" class="col-6">
+                      <label for="example-date-input" class="col-5 col-form-label bold">Nombre:</label>
+                      <label for="example-date-input" class="col-5 col-form-label bold">Apellido:</label>
+                      <label for="example-date-input" id="firstname-output" class="col-5 col-form-label"> </label>
+                      <label for="example-date-input" id="lastname-output" class="col-5 col-form-label"> </label>
+                      <label for="example-date-input" class="col-5 col-form-label bold">Fecha de nacimiento:</label>
+                      <label for="example-date-input" class="col-5 col-form-label bold">CURP:</label>
+                      <label for="example-date-input" id="birthdate-output" class="col-5 col-form-label"> </label>
+                      <label for="example-date-input" id="curp-output" class="col-5 col-form-label"> </label>
+                      <div id="response"></div>
+                  </div>
+                  <div id="chart" class="col-5">
+                  </div>
+                </div>
+			    		</div>
+			    	</div>
+
+			    </div>
+			</section>
+
+
+		</main>
+
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/imagesloaded.js"></script>
+        <script src="js/skrollr.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="js/_main.js"></script>
+        <script>
+
+          $(document).ready(function() {
+            $('#title-result').html("Especifique los datos anteriormente solicitados");
+            $('#result').css('display','none');
+          });
+
+          $("#to-slide-2").click(function(){
+            $('html, body').animate({
+                scrollTop: $("#slide-2").offset().top
+            }, 1200);
+          });
+
+          $("#form-riskochain").submit(function(e){
+            e.preventDefault();
+
+            var query = "?firstname="+$('#firstname').val();
+            query += "&lastname="+$('#lastname').val();
+            query += "&birthdate="+$('#birthdate').val();
+            query += "&curp="+$('#curp').val();
+            query += "&sector="+$('#sector').val();
+
+
+
+            $.get("http://localhost:8000/riesgo/"+query, function(result, status){
+
+                //alert("Data: " + JSON.stringify(result) + "\nStatus: " + status);
+
+                //alert(result.data.sector)
+
+                $('#firstname-output').html($('#firstname').val())
+                $('#lastname-output').html($('#lastname').val())
+                $('#birthdate-output').html($('#birthdate').val())
+                $('#curp-output').html($('#curp').val())
+
+                var sector
+                if($('#sector').val() == "auto"){
+                  sector = result.data.sector.auto;
+                }else if ($('#sector').val() == "salud") {
+                  sector = result.data.sector.salud;
+                }
+
+                $('#title-result').html("Este es el riesgo para este cliente");
+                $('#result').css('display','block');
+
+
+                $('#response').html("");
+
+                $('#response').append('<label class="col-12 col-form-label bold">Polizas de seguros encontrados:</label>');
+
+                for (var i = 0; i < sector.polizas.length; i++) {
+                  obj = sector.polizas[i];
+                  $('#response').append('<label class="col-12 col-form-label">'+obj.aseguradora+' ('+obj.poliza+')</label>');
+                  $('#response').append('<label class="col-12 col-form-label">'+obj.inicio+' a '+obj.vencimiento+'</label>');
+                }
+
+                  google.charts.load('current', {'packages':['gauge']});
+                  google.charts.setOnLoadCallback(drawChart);
+
+                  function drawChart() {
+
+                    var data = google.visualization.arrayToDataTable([
+                      ['Label', 'Value'],
+                      ['Riesgo', sector.riesgo]
+                    ]);
+
+                    var options = {
+                      width: 400, height: 300,
+                      redFrom: 66, redTo: 100,
+                      yellowFrom:33, yellowTo: 66,
+                      greenFrom:0, greenTo: 33,
+                      minorTicks: 5
+                    };
+
+                    var chart = new google.visualization.Gauge(document.getElementById('chart'));
+
+                    chart.draw(data, options);
+
+                    /*
+                    setInterval(function() {
+                      data.setValue(0, 1, 40 + Math.round(60 * Math.random()));
+                      chart.draw(data, options);
+                    }, 13000);
+                    setInterval(function() {
+                      data.setValue(1, 1, 40 + Math.round(60 * Math.random()));
+                      chart.draw(data, options);
+                    }, 5000);
+                    setInterval(function() {
+                      data.setValue(2, 1, 60 + Math.round(20 * Math.random()));
+                      chart.draw(data, options);
+                    }, 26000);
+
+                    */
+
+                    $('html, body').animate({
+                        scrollTop: $("#slide-3").offset().top
+                    }, 1200);
+
+                  }
+            });
+
+          });
+
+        </script>
+
+    </body>
+</html>
